@@ -29,18 +29,17 @@
 </p>
 
 <p align="center">
-  Supervisor: Anastasios Tsilikounas, Laboratory Teaching Staff
+  Supervisor: Eleni Tsalera, Laboratory Teaching Staff
 </p>
 <p align="center">
-  <a href="https://ice.uniwa.gr/en/emd_person/anastasios-tsilikounas/" target="_blank">UNIWA Profile</a> ·
-  <a href="https://www.linkedin.com/in/anastasios-tsilikounas-31111566/" target="_blank">LinkedIn</a>
+  <a href="https://www.researchgate.net/profile/Eleni-Tsalera-2" target="_blank">UNIWA Profile</a>
 </p>
 
 <p align="center">
-  Co-supervisor: Georgios Antoniou, Laboratory Teaching Staff
+  Co-supervisor: Michalis Diamantopoulos, Lecturer in Applications
 </p>
 <p align="center">
-  <a href="https://ice.uniwa.gr/en/emd_person/georgios-antoniou/" target="_blank">UNIWA Profile</a>
+  <a href="https://ice.uniwa.gr/emd_person/22674/" target="_blank">UNIWA Profile</a>
 </p>
 
 <p align="center">
@@ -51,9 +50,7 @@
 
 # Project Overview
 
-This document is a laboratory report for the **Circuit Theory** course within the **Department of Informatics and Computer Engineering** at the **University of West Attica**.
-
-The project focuses on the **study and analysis of the resonance effect in RLC circuits**. It explores the behavior of **resistors, inductors, and capacitors** when connected in **series** and **parallel** configurations across varying frequencies.
+This repository contains the laboratory report for **Project 5**, focusing on the study and analysis of a **Bipolar Junction Transistor (BJT)** operating in a **common emitter circuit configuration**. The project combines **theoretical calculations**, **software simulations**, and **experimental laboratory measurements**.
 
 ---
 
@@ -78,123 +75,203 @@ The project focuses on the **study and analysis of the resonance effect in RLC c
 
 ---
 
-## Key Contents
+## Project Contents
 
-The report is structured into:
+The report is structured into key sections centered on the **Common Emitter Circuit**:
 
-- **Theoretical Analysis**  
-- **Software Simulations** using *Multisim*  
-- **Experimental Laboratory Results**
+- **Output Characteristics (I<sub>c</sub> = f(V<sub>ce</sub>))**  
+  Detailed analysis of collector current versus collector–emitter voltage  
+  *(Pages 6–33)*
+
+- **Input Characteristics (I<sub>b</sub> = f(V<sub>be</sub>))**  
+  Analysis of base current versus base–emitter voltage  
+  *(Pages 34–57)*
+
+- **Laboratory Questions**  
+  Analytical responses to experiment-related questions  
+  *(Pages 58–59)*
 
 ---
 
-## 1. RLC Series Circuit
+## Equipment and Components
 
-**Theory:**  
-Analysis of the frequency at which the **inductive reactance (Xₗ)** and **capacitive reactance (Xc)** cancel each other out.
+The following equipment and components were used during the experimental phase:
 
-**Key Observations:**
+- **MCP M21-7000A** – Analog & Digital Training System (Breadboard)  
+- **MCP MT8045** – Digital Multimeter Bench  
+- **Transistor** – BJT **BC107BP**  
+- **Resistors** – 560 Ω, 10 kΩ  
+- **Potentiometers** – 100 kΩ / 1 kΩ  
+- **Software** – **NI Multisim** for circuit simulation  
 
-- The **impedance (Z)** becomes equal to the **ohmic resistance (R)** at resonance.
-- **Maximum current flow** occurs at the resonant frequency.
-- **Overvoltage phenomena** are observed across the capacitor and inductor.
+---
 
-**Formula Used:**  
+## Methodology
+
+Each characteristic studied in the project follows a structured **three-step methodology**:
+
+1. **Theoretical Solution**  
+   Mathematical analysis and derivation of the underlying principles.
+
+2. **Simulated Solution**  
+   Verification of theoretical results using **Multisim** simulations and snapshots.
+
+3. **Experimental Solution**  
+   Physical implementation in the laboratory, including real-world measurements and observations.
+
+---
+
+## Key Findings (Example Data)
+
+The **output characteristics** were recorded for various base current values (I<sub>b</sub>).  
+For **I<sub>b</sub> = 75 mA**, the measured collector current values (I<sub>c</sub>) were:
+
+- **V<sub>ce</sub> = 0.1 V** → I<sub>c</sub> = **13.2 mA**  
+- **V<sub>ce</sub> = 0.6 V** → I<sub>c</sub> = **23.0 mA**  
+- **V<sub>ce</sub> = 2.0 V** → I<sub>c</sub> = **23.4 mA**  
+- **V<sub>ce</sub> = 9.0 V** → I<sub>c</sub> = **25.5 mA**
+
+The **load line** was calculated using the equation:
 
 $$
-f_r = \frac{1}{2\pi\sqrt{LC}}
+Vcc − Ic·Rc − Vce = 0
 $$
 
-Where:  
-- \(f_r\) = resonant frequency  
-- \(L\) = inductance  
-- \(C\) = capacitance
-
+This equation was used to determine the transistor’s **operating point (Q-point)**.
 
 ---
 
-## 2. RLC Parallel Circuit
+# Installation & Setup Guide  
 
-- Theoretical solutions and **simulation results** for parallel RLC configurations.  
-- Detailed analysis provided in the report (pages 12–17).
-
----
-
-## Laboratory Equipment
-
-The experimental work utilized the following tools:
-
-- **Multimeters** (Analog and Digital)  
-- **Oscilloscope**  
-- **Breadboard**  
-- **Passive Components:**  
-  - Resistors  
-  - Capacitors  
-  - Inductors
-
----
-
-# Installation & Setup Guide
-
-This repository contains laboratory simulations and analysis for **Circuit Theory**, focusing on **RLC series and parallel circuits** and their resonance behavior.  
-
-All simulations are implemented in **NI Multisim**.
+This guide explains how to install, set up, and use the **BJT laboratory project** repository.  
+The project focuses on the **common emitter BJT circuit**, combining **theoretical analysis**, **NI Multisim simulations**, and **experimental laboratory measurements**.
 
 ---
 
 ## Prerequisites
 
-### Required Software
-- **NI Multisim 14** (or later)  
-  Ensure your system meets the requirements for running `.ms14` files.  
-  Download from [NI Multisim](https://www.ni.com/en-us/shop/electronic-test-instrumentation/application-software-for-electronic-test-and-instrumentation-category/what-is-multisim.html).
-
-### Optional Software
-- **PDF Viewer** for documentation: `Coordination.pdf` / `Συντονισμός.pdf`
+Before using this repository, ensure the following prerequisites are satisfied.
 
 ---
 
-## Installation Steps
+### 1. Software Requirements
+
+#### NI Multisim
+- **NI Multisim 14 or newer** (recommended)
+- Required for:
+  - Simulating common emitter BJT circuits
+  - Plotting **input characteristics** (I<sub>b</sub>–V<sub>be</sub>)
+  - Plotting **output characteristics** (I<sub>c</sub>–V<sub>ce</sub>)
+  - Verifying theoretical load-line calculations
+
+Used in:
+- `lab1/MultisimPNG/`
+- `lab3/MultisimPNG/`
+
+---
+
+#### PDF Reader
+- Any modern PDF reader
+- Required to open:
+  - Assignment descriptions
+  - Theoretical BJT documentation (English & Greek)
+
+---
+
+#### Image Viewer
+- Any standard image viewer
+- Required for viewing:
+  - Lab photos
+  - Simulation screenshots
+  - Measurement graphs
+
+---
+
+### 2. Hardware Requirements (Optional – Physical Lab)
+
+Only required if you want to **reproduce the experiments physically**.
+
+- **Analog & Digital Training System:** MCP M21-7000A  
+- **Digital Multimeter:** MCP MT8045  
+- **DC Power Supply**
+- **Components**
+  - BJT transistor: **BC107BP**
+  - Resistors: **560 Ω**, **10 kΩ**
+  - Potentiometers: **100 kΩ**, **1 kΩ**
+  - Breadboard & connecting wires
+
+> Hardware is **not required** for theoretical study or Multisim simulations.
+
+---
+
+## Installation & Setup
 
 ### 1. Clone the Repository
+
 ```bash
-git clone https://github.com/Circuit-Theory/Coordination.git
+git clone https://github.com/Electronics-aka-Uniwa/BJT.git
+cd BJT
 ```
 
-### 2. Navigate to Project Directory
-```bash
-cd Coordination
-```
-Ensure the following folder structure exists:
-```bash
-assign/
-docs/
-multisim/
-```
+### 2. Study the Theory
+Navigate to the `docs/` directory and open:
+- English: `Bipolar-Junction-Transistor.pdf`
+- Greek: `Διπολικά-Τρανζίστορ.pdf`
 
----
+These documents cover:
+- BJT operation principles
+- Common emitter configuration
+- Input and output characteristics
+- Load-line analysis and Q-point determination
 
-## Multisim Simulation Files
+### 3. Read the Assignment Instructions
+Open the files in `assign/`:
+- English: `Exercise-8th-Transistor.pdf`
+- Greek: `Άσκηση-8η-Τρανζίστορ.pdf`
 
-The repository includes two key simulation files:
+These define:
+- Circuit configurations
+- Measurement steps
+- Required plots and calculations
 
-| File  | Description |
-|------:|-------------|
-| multisim/CoordinationSerial.ms14 |  RLC series circuit simulation |
-| multisim/CoordinationParallel.ms14 |  RLC parallel circuit simulation |
+### 4. Run Multisim Simulations
+Input Characteristics (I<sub>b</sub> vs V<sub>be</sub>)
+1. Launch NI Multisim.
+2. Open the relevant circuit (or recreate it using the schematic from the PDFs).
+3. Sweep V<sub>be</sub>.
+4. Measure and plot base current (I<sub>b</sub>).
 
+#### Output Characteristics (I<sub>c</sub> vs V<sub>ce</sub>)
+1. Set fixed values of base current (I<sub>b</sub>).
+2. Sweep V<sub>ce</sub>.
+3. Record collector current (I<sub>c</sub>).
+4. Compare simulation results with:
+    - Theoretical curves
+    - Experimental data in lab1/ and lab3/
 
-### 3. Open a Simulation in Multisim
-- Launch NI Multisim.
-- Select File → Open.
-- Navigate to the `multisim/` folder.
-- Open the desired `.ms14` file (series or parallel circuit).
-- Wait for the circuit topology to load.
+### 5. Load Line & Q-Point Analysis
+Use the equation:
 
----
+$$
+Vcc − Ic·Rc − Vce = 0
+$$
 
-## Open the Documentation
-1. Navigate to the `docs/` directory
-2. Open the report corresponding to your preferred language:
-    - English: `Coordination.pdf`
-    - Greek: `Συντονισμός.pdf`
+Steps:
+1. Determine `Vcc` and `Rc`.
+2. Plot the load line on the I<sub>c</sub>–V<sub>ce</sub> graph.
+3. Identify the operating point (Q-point).
+4. Compare with:
+    - Multisim results
+    - Laboratory measurements
+
+### 6. Review Experimental Results
+- Experimental photos:
+`lab1/LabPNG/`, `lab3/LabPNG/`
+- Simulation screenshots:
+`lab1/MultisimPNG/`, `lab3/MultisimPNG/`
+- Notes & measurements:
+`Notes/`
+
+These materials validate:
+- Agreement between theory, simulation, and practice
+- Real-world effects such as transistor non-idealities
